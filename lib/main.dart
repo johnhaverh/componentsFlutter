@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:componentsflutter/pages/listview1_page.dart';
+//import 'package:componentsflutter/pages/listview1_page.dart';
+import 'package:componentsflutter/pages/listview2_page.dart';
 
 void main() => runApp(MyApp());
 
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Material App',
-      home: Listview1Page()
+      home: Listview2Page()
     );
   }
 }
