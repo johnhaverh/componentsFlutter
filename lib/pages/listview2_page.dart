@@ -11,6 +11,8 @@ class Listview2Page extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('ListView Type 2'),
+        elevation: 0,
+        backgroundColor: Colors.deepPurpleAccent,
       ),
       body: ListView.separated(
         itemCount: superCars.length,
@@ -18,19 +20,14 @@ class Listview2Page extends StatelessWidget {
         itemBuilder: (context, index) => ListTile(
             leading: Icon(Icons.car_repair),
             title: Text(superCars[index]),
-            trailing: Icon(Icons.arrow_forward_ios_outlined),
+            trailing: Icon(Icons.arrow_forward_ios_outlined, color: Colors.deepPurpleAccent,),
+            onTap: () {
+              final supercar = superCars[index];
+              print(supercar);
+            } ,
           ), 
         separatorBuilder: (_, __) => const Divider(), 
       )
     );
   }
 }
-        // children: [
-        //   ...superCars.map((supercar) =>   
-        //   ListTile(
-        //     //leading: Icon(Icons.accessibility),
-        //     title: Text(supercar),
-        //     trailing: Icon(Icons.arrow_forward_ios_outlined),
-        //   )).toList(),
-        //   Divider(),
-        // ],
