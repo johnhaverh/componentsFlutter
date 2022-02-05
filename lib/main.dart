@@ -20,6 +20,10 @@ class MyApp extends StatelessWidget {
         'listview2':(BuildContext context) => const Listview2Page(),
         'alert'    :(BuildContext context) => const AlertPage(),
         'card'     :(BuildContext context) => const CardPage(),
+      },
+      onGenerateRoute: (settings) {
+        print(settings);
+        return  MaterialPageRoute(builder: (context) => AlertPage());
       }
     );
   }
