@@ -2,7 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:componentsflutter/themes/app_theme.dart';
 
 class CustomCardType2 extends StatelessWidget {
-  const CustomCardType2({Key key}) : super(key: key);
+
+  final String imageUrl;
+  final String name;
+
+  const CustomCardType2({Key key, @required this.imageUrl, this.name}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,9 +19,8 @@ class CustomCardType2 extends StatelessWidget {
       shadowColor: AppTheme.primary.withOpacity(0.5),
       child: Column(
         children: [
-          
           FadeInImage(
-            image: NetworkImage('https://img.big.dk/wp-content/uploads/2020/04/ESCR_Image-by-Lumion_01.jpg'), 
+            image: NetworkImage(imageUrl), 
             placeholder: AssetImage('assets/jar-loading.gif'),
             width: double.infinity,
             height: 230,
@@ -25,11 +28,12 @@ class CustomCardType2 extends StatelessWidget {
             fadeInDuration: Duration(milliseconds: 300),
           ),
 
-          Container(
-            alignment: AlignmentDirectional.centerEnd,
-            padding: EdgeInsets.only(right: 20, top: 10, bottom: 10),
-            child: Text ('A beautiful sunset')
-          ),
+          if (name != null)
+            Container(
+              alignment: AlignmentDirectional.centerEnd,
+              padding: EdgeInsets.only(right: 20, top: 10, bottom: 10),
+              child: Text (name ?? 'No description')
+            ),
           //Image(image: NetworkImage('https://img.big.dk/wp-content/uploads/2020/04/ESCR_Image-by-Lumion_01.jpg')),
         ],
       ),
