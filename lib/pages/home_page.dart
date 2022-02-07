@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:componentsflutter/router/app_routes.dart';
 
 class HomePage extends StatelessWidget {
    
@@ -15,11 +16,10 @@ class HomePage extends StatelessWidget {
         backgroundColor: Colors.deepPurpleAccent,
       ),
       body: ListView.separated(
-        itemCount: 10, //superCars.length,
-        //itemBuilder: (context, index) => Text(superCars[index]), 
-        itemBuilder: (context, index) => ListTile(
-            leading: Icon(Icons.car_repair),
-            title: Text('Route name'),
+        itemCount: AppRoutes.menuOptions.length,  //10, //superCars.length,
+        itemBuilder: (context, index) => ListTile(  //itemBuilder: (context, index) => Text(superCars[index]), 
+            leading: Icon(AppRoutes.menuOptions[index].iconRoute, color: Colors.indigo),//Icon(Icons.car_repair),
+            title: Text(AppRoutes.menuOptions[index].name),//Text('Route name'),
             trailing: Icon(Icons.arrow_forward_ios_outlined, color: Colors.deepPurpleAccent,),
             onTap: () {
               
@@ -28,7 +28,7 @@ class HomePage extends StatelessWidget {
               // Navigator.push(context, route);
               //Navigator.pushReplacement(context, newRoute) //destruye las rutas previas-- util en login
 
-              Navigator.pushNamed(context, 'card2');
+              Navigator.pushNamed(context, AppRoutes.menuOptions[index].route);
             } ,
           ), 
         separatorBuilder: (_, __) => const Divider(), 
