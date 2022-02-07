@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:componentsflutter/themes/app_theme.dart';
 import 'package:componentsflutter/router/app_routes.dart';
 
 class HomePage extends StatelessWidget {
@@ -18,9 +19,9 @@ class HomePage extends StatelessWidget {
       body: ListView.separated(
         itemCount: AppRoutes.menuOptions.length,  //10, //superCars.length,
         itemBuilder: (context, index) => ListTile(  //itemBuilder: (context, index) => Text(superCars[index]), 
-            leading: Icon(AppRoutes.menuOptions[index].iconRoute, color: Colors.indigo),//Icon(Icons.car_repair),
+            leading: Icon(AppRoutes.menuOptions[index].iconRoute, color: AppTheme.primary),//Icon(Icons.car_repair),
             title: Text(AppRoutes.menuOptions[index].name),//Text('Route name'),
-            trailing: Icon(Icons.arrow_forward_ios_outlined, color: Colors.deepPurpleAccent,),
+            trailing: Icon(Icons.arrow_forward_ios_outlined, color: AppTheme.primary,),
             onTap: () {
               
               //metodo 1 -- no muy optimo 
