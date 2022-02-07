@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:componentsflutter/pages/pages.dart';
+import 'package:componentsflutter/router/app_routes.dart';
 
 void main() => runApp(MyApp());
 
@@ -13,18 +13,9 @@ class MyApp extends StatelessWidget {
       title: 'Material App',
       //home: Listview2Page(),
 
-      initialRoute: 'home',
-      routes:{
-        'home'     :(BuildContext context) => const HomePage(),
-        'listview1':(BuildContext context) => const Listview1Page(),
-        'listview2':(BuildContext context) => const Listview2Page(),
-        'alert'    :(BuildContext context) => const AlertPage(),
-        'card'     :(BuildContext context) => const CardPage(),
-      },
-      onGenerateRoute: (settings) {
-        print(settings);
-        return  MaterialPageRoute(builder: (context) => AlertPage());
-      }
+      initialRoute: AppRoutes.initialRoute,
+      routes:AppRoutes().routes,
+      onGenerateRoute: AppRoutes.onGenerateRoute,
     );
   }
 }
