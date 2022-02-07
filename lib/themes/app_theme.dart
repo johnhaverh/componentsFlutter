@@ -14,9 +14,13 @@ class AppTheme{
       color: primary,
       elevation: 0
     ),
+
+    textButtonTheme: TextButtonThemeData(
+      style:  TextButton.styleFrom(primary: primary),
+    )
   );
 
-    static final ThemeData darkTheme = ThemeData.dark().copyWith(
+  static final ThemeData darkTheme = ThemeData.dark().copyWith(
 
     //Primary color
     primaryColor: primary,
@@ -29,4 +33,7 @@ class AppTheme{
 
     //scaffoldBackgroundColor: Colors.black,
   );
+  
+  
+
 }
