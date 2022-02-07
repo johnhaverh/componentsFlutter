@@ -11,8 +11,8 @@ class Listview2Page extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('ListView Type 2'),
-        elevation: 0,
-        backgroundColor: Colors.deepPurpleAccent,
+        //elevation: 0,
+        //backgroundColor: Colors.deepPurpleAccent,
       ),
       body: ListView.separated(
         itemCount: superCars.length,

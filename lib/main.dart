@@ -12,10 +12,19 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Material App',
       //home: Listview2Page(),
-
       initialRoute: AppRoutes.initialRoute,
       routes:AppRoutes.getAppRoutes(),
       onGenerateRoute: AppRoutes.onGenerateRoute,
+      theme: ThemeData.light().copyWith(
+        //Primary color
+        primaryColor: Colors.indigo,
+
+        //AppBar Theme
+        appBarTheme: AppBarTheme(
+          color: Colors.indigo,
+          elevation: 0
+        ),
+      ),
     );
   }
 }

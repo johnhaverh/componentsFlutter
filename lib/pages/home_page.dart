@@ -12,8 +12,8 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Flutter Components'),
-        elevation: 0,
-        backgroundColor: Colors.deepPurpleAccent,
+        //elevation: 0,
+        //backgroundColor: Colors.deepPurpleAccent,
       ),
       body: ListView.separated(
         itemCount: AppRoutes.menuOptions.length,  //10, //superCars.length,
