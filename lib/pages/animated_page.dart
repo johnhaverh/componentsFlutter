@@ -37,13 +37,15 @@ class _AnimatedPageState extends State<AnimatedPage> {
         title: Text('Animated Container'),
       ),
       body: Center(
-        child: Container(
+        child: AnimatedContainer(
           width: _width,
           height: _height,
           decoration: BoxDecoration(
             color: _color,
             borderRadius: _borderRadius
-          ),
+          ), 
+          duration: Duration(milliseconds: 400),
+          curve: Curves.easeInCubic ,
         ),
       ),
       floatingActionButton: FloatingActionButton(
