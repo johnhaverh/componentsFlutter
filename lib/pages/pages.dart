@@ -10,3 +10,6 @@ export 'package:componentsflutter/pages/home_page.dart';
 export 'package:componentsflutter/pages/inputs_page.dart';
 export 'package:componentsflutter/pages/listview1_page.dart';
 export 'package:componentsflutter/pages/listview2_page.dart';
+export 'package:componentsflutter/pages/slider_page.dart';
+
+
