@@ -14,8 +14,11 @@ class AlertPage extends StatelessWidget {
           //    shape: StadiumBorder(),
           //    elevation: 0
           //  ),
+           child: Padding(
+             padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10),
+             child: Text('Mostrar Alerta',style:  TextStyle(fontSize: 20 ),),
+           ),
            onPressed: () {}, 
-           child: Text('Mostrar Alerta')
         ),
       ),
       floatingActionButton: FloatingActionButton(
