@@ -6,9 +6,22 @@ class AlertPage extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
+
       body: Center(
-         child: Text('AlertPage'),
+         child: ElevatedButton(
+          //  style: ElevatedButton.styleFrom(
+          //    shape: StadiumBorder(),
+          //    elevation: 0
+          //  ),
+           onPressed: () {}, 
+           child: Text('Mostrar Alerta')
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.close),
+        onPressed: () {
+        },
       ),
     );
   }
