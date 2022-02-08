@@ -12,19 +12,37 @@ class CustomInputField extends StatelessWidget {
   final String initialValue;
   final TextInputType keyboardType;
   final bool obscureText;
+  final TextCapitalization textCapitalization;
+  final String formProperty;
+  final Map<String, String> formValues;
 
-  const CustomInputField({ Key key, this.hintText, this.labelText, this.helperText, this.icon, this.suffixIcon, this.preffixIcon, this.counterText, this.initialValue, this.keyboardType, this.obscureText = false,}) : super(key: key);
+  const CustomInputField({ 
+    Key key, 
+    this.hintText, 
+    this.labelText, 
+    this.helperText, 
+    this.icon, 
+    this.suffixIcon, 
+    this.preffixIcon, 
+    this.counterText, 
+    this.initialValue, 
+    this.keyboardType, 
+    this.obscureText = false, 
+    this.textCapitalization=TextCapitalization.none, 
+    @required this.formProperty, 
+    @required this.formValues,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
       autofocus: false,
       initialValue: initialValue,
-      textCapitalization: TextCapitalization.words,
+      textCapitalization: textCapitalization,
       keyboardType: keyboardType,
       obscureText: obscureText,
       onChanged: (value) {
-        //print(value);
+        formValues[formProperty] = value;
       },
       validator: (value) {
         if (value == null ) return 'requerido';
