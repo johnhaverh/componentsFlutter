@@ -21,7 +21,7 @@ class AvatarPage extends StatelessWidget {
       body: Center(
         child: CircleAvatar(
           maxRadius: 100,
-          backgroundImage: NetworkImage('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHlIC6mj9KXGnVloMBpbZ5MULyumav2TarjA&usqp=CAU'),
+          backgroundImage: NetworkImage('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAyfFclNJMN3r_RvotI5HTzc1cjRFo_uC1Hw&usqp=CAU'),
         )
       ),
     );

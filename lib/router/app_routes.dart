@@ -7,12 +7,13 @@ class AppRoutes {
   static const initialRoute = 'home';
 
   static final menuOptions = <MenuOptions>[
-    MenuOptions(route: 'home',      name: 'Home Page',        screen: const HomePage(),      iconRoute: Icons.home),
-    MenuOptions(route: 'listview1', name: 'List View type 1', screen: const Listview1Page(), iconRoute: Icons.list_alt),
-    MenuOptions(route: 'listview2', name: 'List View type 2', screen: const Listview2Page(), iconRoute: Icons.list_alt_sharp),
-    MenuOptions(route: 'alert',     name: 'Alerts',           screen: const AlertPage(),     iconRoute: Icons.add_alert),
-    MenuOptions(route: 'card',      name: 'Cards',            screen: const CardPage(),      iconRoute: Icons.credit_card),
-    MenuOptions(route: 'Avatar',    name: 'Circle Avatar',    screen: const AvatarPage(),    iconRoute: Icons.supervised_user_circle_outlined),
+    MenuOptions(route: 'home',      name: 'Home Page',          screen: const HomePage(),      iconRoute: Icons.home),
+    MenuOptions(route: 'listview1', name: 'List View type 1',   screen: const Listview1Page(), iconRoute: Icons.list_alt),
+    MenuOptions(route: 'listview2', name: 'List View type 2',   screen: const Listview2Page(), iconRoute: Icons.list_alt_sharp),
+    MenuOptions(route: 'alert',     name: 'Alerts',             screen: const AlertPage(),     iconRoute: Icons.add_alert),
+    MenuOptions(route: 'card',      name: 'Cards',              screen: const CardPage(),      iconRoute: Icons.credit_card),
+    MenuOptions(route: 'avatar',    name: 'Circle Avatar',      screen: const AvatarPage(),    iconRoute: Icons.supervised_user_circle_outlined),
+    MenuOptions(route: 'animated',  name: 'Animated Container', screen: const AnimatedPage(),  iconRoute: Icons.play_circle_filled_outlined),
   ];
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
