@@ -17,8 +17,13 @@ class InputsPage extends StatelessWidget {
           child: Column(
             children: [
               CustomInputField(labelText: 'Nombre', hintText: 'Nombre del usuario',),
-              Divider(),
+              SizedBox(height:30),
               CustomInputField(labelText: 'Apellido', hintText: 'Apellido del usuario',),
+              SizedBox(height:30),
+              CustomInputField(labelText: 'Email', hintText: 'Email del usuario',keyboardType: TextInputType.emailAddress),
+              SizedBox(height:30),
+              CustomInputField(labelText: 'Password', hintText: 'Password del usuario',obscureText: true),
+              SizedBox(height:30),
             ],
           ),
         )

@@ -9,15 +9,20 @@ class CustomInputField extends StatelessWidget {
   final IconData suffixIcon;
   final IconData preffixIcon;
   final String counterText;
+  final String initialValue;
+  final TextInputType keyboardType;
+  final bool obscureText;
 
-  const CustomInputField({ Key key, this.hintText, this.labelText, this.helperText, this.icon, this.suffixIcon, this.preffixIcon, this.counterText,}) : super(key: key);
+  const CustomInputField({ Key key, this.hintText, this.labelText, this.helperText, this.icon, this.suffixIcon, this.preffixIcon, this.counterText, this.initialValue, this.keyboardType, this.obscureText = false,}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
       autofocus: false,
-      initialValue: '',
+      initialValue: initialValue,
       textCapitalization: TextCapitalization.words,
+      keyboardType: keyboardType,
+      obscureText: obscureText,
       onChanged: (value) {
         //print(value);
       },
